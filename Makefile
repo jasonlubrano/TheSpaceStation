@@ -3,7 +3,14 @@ LD        := g++
 
 BUILD	  := build
 SRC       := src
-MODULES   := Main Characters Skills Crews Map
+
+MAINMOD   := Main
+CHARMOD   := Characters Characters/Nonplayables Characters/Playables
+SKILMOD   := Skills
+CREWMOD   := Crews
+MAPMOD    := Map
+
+MODULES   := $(MAINMOD) $(CHARMOD) $(SKILMOD) $(CREWMOD) $(MAPMOD)
 SRC_DIR   := $(addprefix $(SRC)/,$(MODULES))
 BUILD_DIR := $(addprefix $(BUILD)/,$(MODULES))
 

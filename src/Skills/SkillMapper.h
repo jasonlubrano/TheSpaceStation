@@ -1,5 +1,5 @@
-#ifndef SKILLMAPPING_H
-#define SKILLMAPPING_H
+#ifndef SKILLMAPPER_H
+#define SKILLMAPPER_H
 
 #include <iostream>
 #include <map>
@@ -7,20 +7,20 @@
 
 #include "SkillRank.h"
 
-namespace namespace_skillmapper
+namespace namespace_skill
 {
 
 class SkillMapper {
 public:
     SkillMapper();
+    ~SkillMapper();
     std::map<SkillRank, std::string> MapSkills();
     void SetSkillMapValue(SkillRank srKey, std::string srValue);
     void PrintSkillMap();
-    ~SkillMapper();
 
     std::map<SkillRank, std::string> m_skillMap;
 };
 
-} // namespace_skillmapper
+} // namespace_skill
 
-#endif // SKILLMAPPING_H
+#endif // SKILLMAPPER_H

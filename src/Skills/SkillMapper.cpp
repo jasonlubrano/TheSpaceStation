@@ -1,6 +1,6 @@
 #include "SkillMapper.h"
 
-using namespace namespace_skillmapper;
+using namespace namespace_skill;
 
 SkillMapper::SkillMapper() {
     MapSkills();
@@ -12,30 +12,40 @@ std::map<SkillRank, std::string> SkillMapper::MapSkills() {
     SkillRank sr;
     for(int i=0; i<skillRankLength; ++i) {
         sr = static_cast<SkillRank>(i);
-        switch (sr)
-        {
-        case NewComer:
-            SetSkillMapValue(NewComer, "New Comer");
-            break;
-        case Neophyte:
-            SetSkillMapValue(Neophyte, "Neophyte");
-            break;
-        case Student:
-            SetSkillMapValue(Student, "Student");
-            break;
-        case Adept:
-            SetSkillMapValue(Adept, "Adept");
-            break;
-        case Professor:
-            SetSkillMapValue(Professor, "Professor");
-            break;
-        case GrandMaster:
-            SetSkillMapValue(GrandMaster, "Grand Master");
-            break;
-        default:
-            break;
+        switch (sr) {
+            case NewComer:
+                SetSkillMapValue(sr, "New Comer");
+                break;
+            case Neophyte:
+                SetSkillMapValue(sr, "Neophyte");
+                break;
+            case Student:
+                SetSkillMapValue(sr, "Student");
+                break;
+            case Influenced:
+                SetSkillMapValue(sr, "Influenced");
+                break;
+            case Adept:
+                SetSkillMapValue(sr, "Adept");
+                break;
+            case Expert:
+                SetSkillMapValue(sr, "Expert");
+                break;
+            case Master:
+                SetSkillMapValue(sr, "Master");
+                break;
+            case Professor:
+                SetSkillMapValue(sr, "Professor");
+                break;
+            case GrandMaster:
+                SetSkillMapValue(sr, "Grand Master");
+                break;
+            case Champion:
+                SetSkillMapValue(sr, "Champion");
+                break;            
+            default:
+                break;
         }
-
     }
 }
 

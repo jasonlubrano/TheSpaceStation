@@ -4,23 +4,33 @@
 #include <iostream>
 #include <string>
 
-#include "../Crews/Crew.h"
+#include "../Skills/SkillList.h"
 
 namespace namespace_character
 { 
 
 class Character
 {
-private:
-    std::string m_characterName;
-
 public:
     Character();
     ~Character();
 
     void SetCharacterName(std::string value);
     std::string GetCharacterName();
-    void printCharacterName();
+    void PrintCharacterName();
+
+    void SetCharacterTitle(std::string value);
+    std::string GetCharacterTitle();
+    void PrintCharacterTitle();
+    void PrintCharacterNameAndTitle();
+
+    void InitCharacterSkills();
+    void LevelUpSkills(namespace_skill::Skill skill, int points);
+
+    std::string m_characterName = "";
+    std::string m_characterTitle = "";
+
+    namespace_skill::SkillList m_characterSkillList;
 };
 
 } // namespace_character

@@ -2,9 +2,7 @@
 
 using namespace namespace_crew;
 
-Crew::Crew(/* args */) {
-    printf("New Crew Created\n");
-}
+Crew::Crew() {}
 
 Crew::~Crew() {}
 

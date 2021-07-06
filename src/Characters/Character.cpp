@@ -2,7 +2,7 @@
 
 using namespace namespace_character;
 
-Character::Character(/* args */) {
+Character::Character() {
     printf("New Character Created\n");
 }
 

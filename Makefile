@@ -3,7 +3,7 @@ LD        := g++
 
 BUILD	  := build
 SRC       := src
-MODULES   := Main Characters Skills Crews
+MODULES   := Main Characters Skills Crews Map
 SRC_DIR   := $(addprefix $(SRC)/,$(MODULES))
 BUILD_DIR := $(addprefix $(BUILD)/,$(MODULES))
 
@@ -20,9 +20,9 @@ endef
 
 .PHONY: all checkdirs clean
 
-all: checkdirs $(BUILD)/Main.exe
+all: checkdirs $(BUILD)/TheSpaceStation.exe
 
-build/Main.exe: $(OBJ)
+build/TheSpaceStation.exe: $(OBJ)
 	$(LD) $^ -o $@
 
 checkdirs: $(BUILD_DIR)

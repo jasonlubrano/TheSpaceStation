@@ -13,10 +13,9 @@ class Character
 {
 private:
     std::string m_characterName;
-    namespace_crew::Crew m_Crew;
 
 public:
-    Character(/* args */);
+    Character();
     ~Character();
 
     void SetCharacterName(std::string value);

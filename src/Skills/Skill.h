@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "SkillRank.h"
+#include "SkillList/AllSkills.h"
 
 namespace namespace_skill
 {
@@ -13,11 +14,11 @@ class Skill
 public:
     Skill();
     ~Skill();
-    Skill(std::string skillName);
-    Skill(std::string skillName, int skillPoints);
-    Skill(std::string skillName, int skillPoints, SkillRank skillRank);
+    Skill(SkillEnum skillName);
+    Skill(SkillEnum skillName, int skillPoints);
+    Skill(SkillEnum skillName, int skillPoints, SkillRank skillRank);
 
-    std::string m_skillName;
+    SkillEnum m_skillName;
     SkillRank m_skillRank;
     int m_skillPoints;
 };

@@ -5,8 +5,8 @@ BUILD	  := build
 SRC       := src
 
 MAINMOD   := Main
-CHARMOD   := Characters Characters/Nonplayables Characters/Playables
-SKILMOD   := Skills
+CHARMOD   := Characters Characters/Nonplayables Characters/Playables Characters/CharacterFactory
+SKILMOD   := Skills Skills/SkillList
 CREWMOD   := Crews
 MAPMOD    := Map
 

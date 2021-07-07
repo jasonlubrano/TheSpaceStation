@@ -1,6 +1,8 @@
 #ifndef SKILLRANK_H
 #define SKILLRANK_H
 
+namespace namespace_skill {
+
 typedef enum SkillRank {
     NewComer        = 0,
     Neophyte        = 1,
@@ -12,7 +14,8 @@ typedef enum SkillRank {
     Professor       = 7,
     GrandMaster     = 8,
     Champion        = 9,
-    SkillRankLength = 10 
+    SkillRankLength = 10
 } SkillRank;
 
+}
 #endif // SKILLRANK_H

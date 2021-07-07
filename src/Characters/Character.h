@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-#include "../Skills/SkillList.h"
+#include "../Skills/SkillList/SkillList.h"
 
 namespace namespace_character
 { 
@@ -13,6 +13,8 @@ class Character
 {
 public:
     Character();
+    Character(std::string name);
+    Character(std::string name, std::string title);
     ~Character();
 
     void SetCharacterName(std::string value);
@@ -25,7 +27,8 @@ public:
     void PrintCharacterNameAndTitle();
 
     void InitCharacterSkills();
-    void LevelUpSkills(namespace_skill::Skill skill, int points);
+    void LevelUpSkillPoints(namespace_skill::Skill skill, int points);
+    void AssignCharacterSkill(namespace_skill::Skill skill);
 
     std::string m_characterName = "";
     std::string m_characterTitle = "";

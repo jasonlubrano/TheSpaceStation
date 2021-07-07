@@ -1,7 +1,8 @@
 #ifndef SKILLLIST_H
 #define SKILLLIST_H
 
-#include "SkillCreator.h"
+#include <vector>
+#include "../Skill.h"
 
 namespace namespace_skill
 {
@@ -13,10 +14,9 @@ public:
     SkillList();
     ~SkillList();
 
-    void PopulateSkillList(const std::vector<Skill>& skillVect);
-    void PrintSkillListMap();
-
-    SkillCreator m_SkillCreator;
+    void PopulateSkillList();
+    void PrintSkillsList();
+    
     std::vector<Skill> m_SkillList;
 };
 

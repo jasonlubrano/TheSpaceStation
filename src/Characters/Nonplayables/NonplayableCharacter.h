@@ -13,6 +13,8 @@ class NonplayableCharacter
 {
 public:
     NonplayableCharacter();
+    NonplayableCharacter(std::string name);
+    NonplayableCharacter(std::string name, std::string title);
     ~NonplayableCharacter();
 };
 

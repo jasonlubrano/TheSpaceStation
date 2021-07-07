@@ -3,23 +3,24 @@
 using namespace namespace_skill;
 
 Skill::Skill() {
-    m_skillName = "";
+    m_skillName = Farming;
     m_skillPoints = 0;
+    m_skillRank = NewComer;
 }
 
-Skill::Skill(std::string skillName) {
+Skill::Skill(SkillEnum skillName) {
     m_skillName = skillName;
     m_skillPoints = 0;
     m_skillRank = NewComer;
 }
 
-Skill::Skill(std::string skillName, int skillPoints) {
+Skill::Skill(SkillEnum skillName, int skillPoints) {
     m_skillName = skillName;
     m_skillPoints = skillPoints;
     m_skillRank = NewComer;
 }
 
-Skill::Skill(std::string skillName, int skillPoints, SkillRank skillRank) {
+Skill::Skill(SkillEnum skillName, int skillPoints, SkillRank skillRank) {
     m_skillName = skillName;
     m_skillPoints = skillPoints;
     m_skillRank = skillRank;

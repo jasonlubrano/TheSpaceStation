@@ -4,6 +4,21 @@ using namespace namespace_character;
 
 Character::Character() {
     printf("New Character Created\n");
+    m_characterName = "";
+    m_characterTitle = "";
+    InitCharacterSkills();
+}
+
+Character::Character(std::string name) {
+    m_characterName = name;
+    m_characterTitle = "";
+    InitCharacterSkills();
+}
+
+Character::Character(std::string name, std::string title) {
+    m_characterName = name;
+    m_characterTitle = title;
+    InitCharacterSkills();    
 }
 
 Character::~Character() {}
@@ -43,7 +58,11 @@ void Character::PrintCharacterNameAndTitle() {
     }
 }
 
-void Character::LevelUpSkills(namespace_skill::Skill skill, int points) {
+void Character::InitCharacterSkills() {
+    // TODO
+}
+
+void Character::LevelUpSkillPoints(namespace_skill::Skill skill, int points) {
     for(int i=0; i < m_characterSkillList.m_SkillList.size(); ++i) {
         if(m_characterSkillList.m_SkillList[i].m_skillName == skill.m_skillName) {
             m_characterSkillList.m_SkillList[i].m_skillPoints += points;
@@ -51,6 +70,10 @@ void Character::LevelUpSkills(namespace_skill::Skill skill, int points) {
     }
 }
 
-void Character::InitCharacterSkills() {
-    m_characterSkillList.PrintSkillListMap();
+void Character::AssignCharacterSkill(namespace_skill::Skill skill) {
+    for(int i=0; i < m_characterSkillList.m_SkillList.size(); ++i) {
+        if(m_characterSkillList.m_SkillList[i].m_skillName == skill.m_skillName) {
+            m_characterSkillList.m_SkillList[i] = skill;
+        }
+    }
 }

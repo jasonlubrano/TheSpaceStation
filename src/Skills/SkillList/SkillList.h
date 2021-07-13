@@ -2,6 +2,8 @@
 #define SKILLLIST_H
 
 #include <vector>
+#include <iomanip>
+
 #include "../Skill.h"
 
 namespace namespace_skill
@@ -16,7 +18,7 @@ public:
 
     void PopulateSkillList();
     void PrintSkillsList();
-    
+
     std::vector<Skill> m_SkillList;
 };
 

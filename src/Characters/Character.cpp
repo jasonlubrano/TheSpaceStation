@@ -3,7 +3,6 @@
 using namespace namespace_character;
 
 Character::Character() {
-    printf("New Character Created\n");
     m_characterName = "";
     m_characterTitle = "";
     InitCharacterSkills();
@@ -52,9 +51,9 @@ void Character::PrintCharacterNameAndTitle() {
     std::string title = GetCharacterTitle();
     std::string name = GetCharacterName();
     if(title == "") {
-        PrintCharacterName();
+        std::cout << name << std::endl;
     } else {
-        std::cout << title << " " << name << std::endl;
+        std::cout << title << ", " << name << std::endl;
     }
 }
 

@@ -18,10 +18,10 @@ void SkillList::PopulateSkillList() {
 
 void SkillList::PrintSkillsList() {
     for(int i = 0; i < m_SkillList.size(); i++) {
-        std::cout << 
-        "[Skill: " << m_SkillList.at(i).m_skillName << " " <<
-        "Pts: " << m_SkillList.at(i).m_skillPoints <<  " " <<
-        "Rank: " << m_SkillList.at(i).m_skillRank << " ]" << 
+        std::cout <<
+        "[ Skill:" << std::setfill('.') << std::setw(8) << m_SkillList.at(i).m_skillName << " | " <<
+        "Pts:" << std::setw(8) << m_SkillList.at(i).m_skillPoints <<  " | " <<
+        "Rank:" << std::setw(8) << m_SkillList.at(i).m_skillRank << " ]" << 
         std::endl;
     }
 }

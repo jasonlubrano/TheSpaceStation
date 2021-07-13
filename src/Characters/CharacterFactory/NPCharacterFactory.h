@@ -14,7 +14,7 @@ public:
     ~NPCharacterFactory();
 
     NonplayableCharacter CreateCharacter_GrandmasterPilot_Hawkfin();
-
+    NonplayableCharacter CreateCharacter_HomelessBob();
     void PrintNPCList(int opt);
 
     std::vector<NonplayableCharacter> m_NPCharacterList;

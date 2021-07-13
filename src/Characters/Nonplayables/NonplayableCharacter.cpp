@@ -3,7 +3,6 @@
 using namespace namespace_character;
 
 NonplayableCharacter::NonplayableCharacter() {
-    printf("New NPC Created\n");
     m_characterName = "";
     m_characterTitle = "";
     InitCharacterSkills();
